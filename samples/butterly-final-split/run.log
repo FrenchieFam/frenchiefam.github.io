@@ -1,0 +1,326 @@
+2026-10-25 09:54:15 [initialize] Delivery folder: C:\homelab\portfolio\samples\butterly-final-split
+2026-10-25 09:54:15 [initialize] Source: C:\homelab\03_Areas\Transcripts\Tim-Butterly-Split.mp4; requested clips: 1; KeepWork: False; Force: True
+2026-10-25 09:54:15 [initialize] Scratch folder: C:\homelab\portfolio\samples\butterly-final-split\.work-2f34914f41e148a1bf7fc3db9962c3ab
+COMMAND: C:\Windows\system32\nvidia-smi.exe "--query-gpu=memory.used" "--format=csv,noheader,nounits"
+1823
+2026-10-25 09:54:15 [preflight] GPU memory used in MiB: 1823
+HTTP GET /api/settings
+{"active_provider":"ollama","providers":{"anthropic":{"model":"claude-sonnet-5","base_url":null},"openai":{"model":"gpt-4o","base_url":null},"gemini":{"model":"gemini-2.0-flash","base_url":null},"ollama":{"model":"qwen2.5:3b-instruct-q4_K_M","base_url":"http://localhost:11434"}},"whisper":{"model":"base","compute_type":"","language":"","diarization":false},"clips":{"min_duration_s":20.0,"max_duration_s":60.0,"max_clips":3},"ingest":{"ytdlp_format":"bestvideo[height\u003c=1080][ext=mp4]+bestaudio[ext=m4a]/best[height\u003c=1080]","cookies_from_browser":"","prefer_youtube_captions":false},"export":{"ratio":"9:16","caption_style":"bold_pop","loudness_lufs":-14.0,"prefer_hardware_encoder":true,"crf":18,"write_srt":false},"insecure_secret_storage":false,"keys_present":{"anthropic":false,"openai":false,"gemini":false,"huggingface_token":false}}
+2026-10-25 09:54:17 [preflight] AutoClip server is running.
+HTTP GET /api/settings
+{"active_provider":"ollama","providers":{"anthropic":{"model":"claude-sonnet-5","base_url":null},"openai":{"model":"gpt-4o","base_url":null},"gemini":{"model":"gemini-2.0-flash","base_url":null},"ollama":{"model":"qwen2.5:3b-instruct-q4_K_M","base_url":"http://localhost:11434"}},"whisper":{"model":"base","compute_type":"","language":"","diarization":false},"clips":{"min_duration_s":20.0,"max_duration_s":60.0,"max_clips":3},"ingest":{"ytdlp_format":"bestvideo[height\u003c=1080][ext=mp4]+bestaudio[ext=m4a]/best[height\u003c=1080]","cookies_from_browser":"","prefer_youtube_captions":false},"export":{"ratio":"9:16","caption_style":"bold_pop","loudness_lufs":-14.0,"prefer_hardware_encoder":true,"crf":18,"write_srt":false},"insecure_secret_storage":false,"keys_present":{"anthropic":false,"openai":false,"gemini":false,"huggingface_token":false}}
+2026-10-25 09:54:17 [preflight] Provider: ollama; Whisper: base
+COMMAND: C:\Users\korah\AppData\Local\Microsoft\WinGet\Links\ffprobe.exe "-v" "error" "-show_streams" "-show_format" "-of" "json" "C:\homelab\03_Areas\Transcripts\Tim-Butterly-Split.mp4"
+{
+    "streams": [
+        {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "mime_codec_string": "avc1.64002a",
+            "width": 1080,
+            "height": 1920,
+            "coded_width": 1080,
+            "coded_height": 1920,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "9:16",
+            "pix_fmt": "yuv420p",
+            "level": 42,
+            "color_range": "tv",
+            "color_space": "bt709",
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "60/1",
+            "avg_frame_rate": "60/1",
+            "time_base": "1/15360",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 384000,
+            "duration": "25.000000",
+            "bit_rate": "1074237",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "1500",
+            "extradata_size": 49,
+            "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+            },
+            "tags": {
+                "language": "und",
+                "handler_name": "VideoHandler",
+                "encoder": "Lavc63.1.102 libx264"
+            }
+        },
+        {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "mime_codec_string": "mp4a.40.2",
+            "sample_fmt": "fltp",
+            "sample_rate": "44100",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 1024,
+            "id": "0x2",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/44100",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 1102500,
+            "duration": "25.000000",
+            "bit_rate": "129528",
+            "nb_frames": "1078",
+            "extradata_size": 5,
+            "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+            },
+            "tags": {
+                "language": "eng",
+                "handler_name": "ISO Media file produced by Google Inc."
+            }
+        }
+    ],
+    "format": {
+        "filename": "C:\\homelab\\03_Areas\\Transcripts\\Tim-Butterly-Split.mp4",
+        "nb_streams": 2,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "25.000000",
+        "size": "3804656",
+        "bit_rate": "1217489",
+        "probe_score": 100,
+        "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf63.1.102"
+        }
+    }
+}
+2026-10-25 09:54:17 [prepare video] Source is already H.264/yuv420p. Using the original read-only for upload.
+COMMAND: C:\Users\korah\AppData\Local\Microsoft\WinGet\Links\ffprobe.exe "-v" "error" "-show_streams" "-show_format" "-of" "json" "C:\homelab\03_Areas\Transcripts\Tim-Butterly-Split.mp4"
+{
+    "streams": [
+        {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "mime_codec_string": "avc1.64002a",
+            "width": 1080,
+            "height": 1920,
+            "coded_width": 1080,
+            "coded_height": 1920,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "9:16",
+            "pix_fmt": "yuv420p",
+            "level": 42,
+            "color_range": "tv",
+            "color_space": "bt709",
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "60/1",
+            "avg_frame_rate": "60/1",
+            "time_base": "1/15360",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 384000,
+            "duration": "25.000000",
+            "bit_rate": "1074237",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "1500",
+            "extradata_size": 49,
+            "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+            },
+            "tags": {
+                "language": "und",
+                "handler_name": "VideoHandler",
+                "encoder": "Lavc63.1.102 libx264"
+            }
+        },
+        {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "mime_codec_string": "mp4a.40.2",
+            "sample_fmt": "fltp",
+            "sample_rate": "44100",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 1024,
+            "id": "0x2",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/44100",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 1102500,
+            "duration": "25.000000",
+            "bit_rate": "129528",
+            "nb_frames": "1078",
+            "extradata_size": 5,
+            "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+            },
+            "tags": {
+                "language": "eng",
+                "handler_name": "ISO Media file produced by Google Inc."
+            }
+        }
+    ],
+    "format": {
+        "filename": "C:\\homelab\\03_Areas\\Transcripts\\Tim-Butterly-Split.mp4",
+        "nb_streams": 2,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "25.000000",
+        "size": "3804656",
+        "bit_rate": "1217489",
+        "probe_score": 100,
+        "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf63.1.102"
+        }
+    }
+}
+2026-10-25 09:54:17 [prepare video] Prepared video verified. Duration: 25.000 seconds.
+COMMAND: C:\Windows\system32\nvidia-smi.exe "--query-gpu=memory.used" "--format=csv,noheader,nounits"
+1822
+2026-10-25 09:54:17 [submit job] GPU memory used in MiB: 1822
+2026-10-25 09:54:17 [submit job] Uploading C:\homelab\03_Areas\Transcripts\Tim-Butterly-Split.mp4
+HTTP POST /api/sources/upload, streaming file: C:\homelab\03_Areas\Transcripts\Tim-Butterly-Split.mp4
+{"id":"09f46967cc374ac5","type":"upload","title":"Tim-Butterly-Split","url":null,"filename":"tmppl4afa3c.mp4","channel":null,"duration_s":25.0,"width":1080,"height":1920,"fps":60.0,"has_audio":true,"has_video":true,"created_at":"2026-10-25T16:54:17+00:00"}
+HTTP POST /api/jobs
+{"source_id":"09f46967cc374ac5","settings":{"max_clips":1,"ratio":"9:16"}}
+{"id":"e0b1a287fc074235","source_id":"09f46967cc374ac5","status":"queued","current_stage":"","progress":0.0,"error":null,"provider":"ollama","created_at":"2026-10-25T16:54:17+00:00","updated_at":"2026-10-25T16:54:17+00:00","started_at":null,"finished_at":null,"source":{"id":"09f46967cc374ac5","type":"upload","title":"Tim-Butterly-Split","url":null,"filename":"tmppl4afa3c.mp4","channel":null,"duration_s":25.0,"width":1080,"height":1920,"fps":60.0,"has_audio":true,"has_video":true,"created_at":"2026-10-25T16:54:17+00:00"}}
+2026-10-25 09:54:17 [submit job] Created job e0b1a287fc074235. New jobs use their own transcript cache.
+HTTP GET /api/jobs/e0b1a287fc074235
+{"id":"e0b1a287fc074235","source_id":"09f46967cc374ac5","status":"running","current_stage":"","progress":0.0,"error":null,"provider":"ollama","created_at":"2026-10-25T16:54:17+00:00","updated_at":"2026-10-25T16:54:17+00:00","started_at":"2026-10-25T16:54:17+00:00","finished_at":null,"source":{"id":"09f46967cc374ac5","type":"upload","title":"Tim-Butterly-Split","url":null,"filename":"tmppl4afa3c.mp4","channel":null,"duration_s":25.0,"width":1080,"height":1920,"fps":60.0,"has_audio":true,"has_video":true,"created_at":"2026-10-25T16:54:17+00:00"}}
+2026-10-25 09:54:17 [wait for job] Job e0b1a287fc074235: running, stage , 0%
+HTTP GET /api/jobs/e0b1a287fc074235
+{"id":"e0b1a287fc074235","source_id":"09f46967cc374ac5","status":"failed","current_stage":"highlights","progress":0.55,"error":"No clips were found. This can mean the video genuinely has no self-contained highlights, or that the model struggled with the transcript â try a larger model or a different provider.","provider":"ollama","created_at":"2026-10-25T16:54:17+00:00","updated_at":"2026-10-25T16:54:28+00:00","started_at":"2026-10-25T16:54:17+00:00","finished_at":"2026-10-25T16:54:28+00:00","source":{"id":"09f46967cc374ac5","type":"upload","title":"Tim-Butterly-Split","url":null,"filename":"tmppl4afa3c.mp4","channel":null,"duration_s":25.0,"width":1080,"height":1920,"fps":60.0,"has_audio":true,"has_video":true,"created_at":"2026-10-25T16:54:17+00:00"}}
+2026-10-25 09:54:32 [wait for job] Job e0b1a287fc074235: failed, stage highlights, 55%
+AutoClip job e0b1a287fc074235 failed at highlights: No clips were found. This can mean the video genuinely has no 
+self-contained highlights, or that the model struggled with the transcript â try a larger model or a different 
+provider.
+At C:\Users\korah\autoclip\clip.ps1:317 char:13
++             throw "AutoClip job $script:JobId $($job.status) at $($jo ...
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (AutoClip job e0...erent provider.:String) [], RuntimeException
+    + FullyQualifiedErrorId : AutoClip job e0b1a287fc074235 failed at highlights: No clips were found. This can mean t 
+   he video genuinely has no self-contained highlights, or that the model struggled with the transcript â try a lar  
+  ger model or a different provider.
+ 
+
+at <ScriptBlock>, C:\Users\korah\autoclip\clip.ps1: line 317
+at <ScriptBlock>, <No file>: line 1
+2026-10-25 09:54:32 [wait for job] FAILED at stage 'wait for job': AutoClip job e0b1a287fc074235 failed at highlights: No clips were found. This can mean the video genuinely has no self-contained highlights, or that the model struggled with the transcript â try a larger model or a different provider.
+Intermediates kept: C:\homelab\portfolio\samples\butterly-final-split\.work-2f34914f41e148a1bf7fc3db9962c3ab
+2026-10-25 09:54:32 [wait for job] AutoClip job: e0b1a287fc074235. Server artifacts are retained; a running job may continue.
+2026-10-25 09:54:32 [wait for job] Delivery is incomplete. See run.log for the failed stage.
