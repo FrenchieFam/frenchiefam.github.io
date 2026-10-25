@@ -156,3 +156,47 @@ figcaption { margin-top: 12px; color: var(--muted); font-size: .8rem; }
   .service-card:hover { transform: none; }
 }
 
+/* Case study: article layout and technical notes */
+.about-case-study-link { margin-top: 20px; }
+.case-study { max-width: 720px; padding-top: 64px; overflow-wrap: anywhere; }
+.case-study-title { padding-bottom: 56px; }
+.case-study h1 { font-size: clamp(2.25rem, 5.5vw, 3.5rem); line-height: 1.1; letter-spacing: -.02em; }
+.case-study-subtitle { margin-top: 24px; color: var(--muted); font-size: clamp(1.1rem, 3vw, 1.3rem); line-height: 1.6; }
+.case-study-meta { margin-top: 24px; color: var(--muted); font-size: .8rem; }
+.case-study section { padding-bottom: 56px; }
+.case-study h2 { margin: 0 0 24px; padding-top: 40px; border-top: 1px solid var(--border); letter-spacing: -.02em; }
+.case-study section > p + p { margin-top: 20px; }
+.case-study code { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; font-size: .875em; }
+.case-study :not(pre) > code { padding: .12em .3em; border-radius: 4px; background: #1a1a20; }
+.case-study pre { margin: 24px 0 0; padding: 20px; border: 1px solid var(--border); border-radius: 8px; background: #1a1a20; white-space: pre-wrap; overflow-wrap: anywhere; }
+.case-study pre code { font-size: .8rem; }
+.case-study-stack { width: 100%; margin-bottom: 24px; border-collapse: collapse; text-align: left; font-size: .9rem; }
+.case-study-stack caption { padding-bottom: 16px; color: var(--muted); text-align: left; font-size: .8rem; }
+.case-study-stack th, .case-study-stack td { padding: 18px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.case-study-stack th:first-child, .case-study-stack td:first-child { padding-left: 0; }
+.case-study-stack th:last-child, .case-study-stack td:last-child { padding-right: 0; }
+.case-study-stack thead th { color: var(--muted); font-size: .75rem; font-weight: 600; }
+.case-study-stack tbody th { width: 23%; font-weight: 650; }
+.case-study-stack td { width: 38.5%; }
+.case-study-failure { margin-top: 24px; padding: 28px; border: 1px solid var(--border); border-left: 3px solid #ef767a; border-radius: 8px; background: var(--surface); }
+.case-study-failure h3 { margin-top: 0; letter-spacing: -.02em; }
+.case-study-failure dl { margin: 24px 0 0; }
+.case-study-failure dt { margin-top: 20px; color: var(--muted); font-size: .75rem; font-weight: 650; }
+.case-study-failure dt:first-child { margin-top: 0; }
+.case-study-failure dd { margin: 6px 0 0; font-size: .95rem; }
+.case-study-failure .case-study-note { margin-top: 16px; color: var(--muted); font-size: .85rem; }
+.case-study-lessons { margin: 0; padding-left: 22px; }
+.case-study-lessons li + li { margin-top: 20px; }
+.case-study-footer { flex-wrap: wrap; }
+@media (max-width: 719px) {
+  .case-study { padding-top: 40px; }
+  .case-study-title { padding-bottom: 40px; }
+  .case-study section { padding-bottom: 40px; }
+  .case-study h2 { padding-top: 32px; }
+  .case-study-failure { padding: 20px; }
+  .case-study-stack thead { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .case-study-stack tbody, .case-study-stack tr, .case-study-stack tbody th, .case-study-stack td { display: block; width: 100%; }
+  .case-study-stack tbody tr { padding-block: 20px; border-bottom: 1px solid var(--border); }
+  .case-study-stack tbody th, .case-study-stack td { padding: 0; border: 0; }
+  .case-study-stack td { margin-top: 10px; }
+}
