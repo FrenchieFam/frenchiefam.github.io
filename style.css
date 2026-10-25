@@ -202,3 +202,55 @@ figcaption { margin-top: 12px; color: var(--muted); font-size: .8rem; }
   .case-study-stack tbody th, .case-study-stack td { padding: 0; border: 0; }
   .case-study-stack td { margin-top: 10px; }
 }
+
+/* Automation service: reuse the homepage palette, type, and cards. */
+.automation-page { line-height: 1.6; }
+.automation-page h2, .automation-page h3 { letter-spacing: -.02em; }
+.automation-page .hero > * { animation-duration: 300ms; }
+.automation-page .hero-service { font-size: clamp(1.05rem, 2.5vw, 1.25rem); line-height: 1.6; color: var(--muted); letter-spacing: normal; }
+.automation-page .hero-actions { flex-direction: column; align-items: stretch; }
+.automation-page .service-grid { grid-template-columns: minmax(0, 1fr); }
+.automation-page .service-card > p:last-child { margin-bottom: 0; }
+.process-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; margin: 0; padding: 0; list-style: none; }
+.process-grid > li { min-width: 0; padding: 24px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
+.process-duration { color: var(--muted); font-size: .875rem; font-weight: 400; }
+.stack-table { width: 100%; border-collapse: collapse; text-align: left; }
+.stack-table th, .stack-table td { padding: 20px; border-bottom: 1px solid var(--border); vertical-align: top; overflow-wrap: anywhere; }
+.stack-table th { font-size: .875rem; font-weight: 650; }
+.stack-table td { color: var(--muted); font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; font-size: .8rem; }
+.stack-table tr:first-child > * { border-top: 1px solid var(--border); }
+.stack-table tbody, .stack-table tr, .stack-table th, .stack-table td { display: block; }
+.stack-table tr { padding-block: 20px; border-bottom: 1px solid var(--border); }
+.stack-table tr:first-child { border-top: 1px solid var(--border); }
+.stack-table tr > * { padding: 0; border: 0; }
+.stack-table tr:first-child > * { border-top: 0; }
+.stack-table td { margin-top: 8px; }
+.pricing-card h3 { margin-top: 20px; font-size: 2rem; font-weight: 650; }
+.pricing-card > p.pricing-tier { margin: 0; color: var(--accent); font-size: .7rem; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; }
+.pricing-period { color: var(--muted); font-size: 1rem; font-weight: 400; }
+.faq-item { border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
+.faq-item + .faq-item { margin-top: 12px; }
+.faq-item summary { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 20px 24px; border-radius: inherit; list-style: none; cursor: pointer; font-size: .95rem; font-weight: 650; transition: background-color 200ms ease; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: ""; width: 8px; height: 8px; flex: 0 0 8px; margin-right: 3px; border-right: 1.5px solid var(--muted); border-bottom: 1.5px solid var(--muted); transform: rotate(45deg); }
+.faq-item[open] summary::after { transform: rotate(225deg); }
+.faq-item summary:hover { background-color: color-mix(in srgb, var(--surface), white 5%); }
+.faq-item summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.faq-item > p { padding: 0 24px 24px; color: var(--muted); font-size: .9rem; }
+.automation-page .site-footer, .automation-page .site-footer nav { flex-wrap: wrap; }
+.automation-page .site-footer nav { gap: 12px 20px; font-size: inherit; }
+@media (min-width: 720px) {
+  .automation-page .hero-actions { flex-direction: row; align-items: center; }
+  .automation-page .service-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stack-table tbody { display: table-row-group; }
+  .stack-table tr { display: table-row; padding: 0; }
+  .stack-table tr > * { display: table-cell; padding: 20px; border-bottom: 1px solid var(--border); }
+  .stack-table tr:first-child > * { border-top: 1px solid var(--border); }
+  .stack-table th { width: 28%; padding-left: 0; }
+  .stack-table td { margin: 0; padding-right: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .automation-page .hero > * { animation: none; }
+  .faq-item summary { transition: none; }
+}
