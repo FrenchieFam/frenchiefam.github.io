@@ -116,6 +116,7 @@ h2 { margin-top: 10px; font-size: clamp(1.6rem, 4vw, 2rem); line-height: 1.25; f
 .service-grid, .portfolio-grid, .steps-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; }
 .service-grid { gap: 16px; }
 .portfolio-grid { justify-items: center; }
+.portfolio-attribution { font-size: 0.8rem; color: #888; text-align: center; margin-top: 2rem; }
 .sample { width: 100%; max-width: 280px; min-width: 0; }
 .steps-grid { list-style: none; margin: 0; padding: 0; }
 .step-number { display: block; color: var(--muted); opacity: .65; font-size: 3.5rem; font-weight: 300; line-height: 1; letter-spacing: -.06em; font-variant-numeric: tabular-nums; }
