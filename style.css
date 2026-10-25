@@ -291,3 +291,19 @@ figcaption { margin-top: 12px; color: var(--muted); font-size: .8rem; }
 @media (prefers-reduced-motion: reduce) {
   .process-page .hero > * { animation: none; }
 }
+
+/* Keep all four budget columns visible on small screens. */
+.vram-table { width: 100%; margin-bottom: 24px; border-collapse: collapse; table-layout: fixed; text-align: left; font-size: .9rem; }
+.vram-table caption { padding-bottom: 16px; color: var(--muted); text-align: left; font-size: .8rem; }
+.vram-table th, .vram-table td { padding: 18px 10px; border-bottom: 1px solid var(--border); vertical-align: top; overflow-wrap: anywhere; }
+.vram-table th:first-child { width: 30%; padding-left: 0; }
+.vram-table th:nth-child(2) { width: 32%; }
+.vram-table th:nth-child(3) { width: 18%; }
+.vram-table th:last-child, .vram-table td:last-child { width: 20%; padding-right: 0; }
+.vram-table thead th { color: var(--muted); font-size: .75rem; font-weight: 600; }
+.vram-table tbody th { font-weight: 650; }
+.vram-table td:nth-child(3), .vram-table th:nth-child(3) { text-align: right; font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; font-variant-numeric: tabular-nums; }
+@media (max-width: 719px) {
+  .vram-table { font-size: .75rem; }
+  .vram-table th, .vram-table td { padding: 14px 5px; }
+}
