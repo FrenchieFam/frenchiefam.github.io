@@ -1,0 +1,22 @@
+2026-10-25 09:22:42 [initialize] Delivery folder: C:\homelab\portfolio\samples
+2026-10-25 09:22:42 [initialize] Source: C:\homelab\03_Areas\Transcripts\Tim-Butterly-Clip-Source.mp4; requested clips: 1; KeepWork: False; Force: False
+2026-10-25 09:22:42 [initialize] Scratch folder: C:\homelab\portfolio\samples\.work-ad232b0a704645f7b6469a616ad52bf4
+COMMAND: C:\Windows\system32\nvidia-smi.exe "--query-gpu=memory.used" "--format=csv,noheader,nounits"
+5970
+2026-10-25 09:22:42 [preflight] GPU memory used in MiB: 5970
+2026-10-25 09:22:42 [preflight] WARNING: VRAM exceeds 2500 MB. AutoClip may stall or run out of GPU memory.
+High-VRAM confirmation: n
+Stopped before starting work. Free VRAM or rerun with -Force.
+At C:\Users\korah\autoclip\clip.ps1:148 char:53
++ ... y|yes)$') { throw 'Stopped before starting work. Free VRAM or rerun w ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Stopped before ...un with -Force.:String) [], RuntimeException
+    + FullyQualifiedErrorId : Stopped before starting work. Free VRAM or rerun with -Force.
+ 
+
+at Confirm-Vram, C:\Users\korah\autoclip\clip.ps1: line 148
+at <ScriptBlock>, C:\Users\korah\autoclip\clip.ps1: line 254
+at <ScriptBlock>, <No file>: line 1
+2026-10-25 09:24:14 [preflight] FAILED at stage 'preflight': Stopped before starting work. Free VRAM or rerun with -Force.
+Intermediates kept: C:\homelab\portfolio\samples\.work-ad232b0a704645f7b6469a616ad52bf4
+2026-10-25 09:24:14 [preflight] Delivery is incomplete. See run.log for the failed stage.

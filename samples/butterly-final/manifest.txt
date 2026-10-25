@@ -1,0 +1,15 @@
+AutoClip delivery manifest
+Source file: C:\homelab\03_Areas\Transcripts\Tim-Butterly-Highlight.mp4
+Source duration: 25.000 seconds
+Job ID: 6967aa2a60d3448d
+Requested clip count: 1
+Clip count: 1
+Format: MP4, H.264, yuv420p, AAC, 9:16, faststart
+Titles are AutoClip suggestions and may need editorial review.
+
+Clip 1: 01-why-i-wont-move-to-texas-7bcbe48ab7a349e5.mp4
+Duration: 25.000 seconds
+Source range: 0.000 - 25.330 seconds
+Suggested title: Why I won't move to Texas
+Transcript text (first 50 words): to have moved sunny Texas and never I'm never going home. It's carful of cacti and lizards. You're sending me pictures of lizards on the dashboard. I was like, is that like a cool, you seem like you would have like a cool dashboard ornament of a lizard nose, real
+

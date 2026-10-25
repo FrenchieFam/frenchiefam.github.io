@@ -1,0 +1,643 @@
+2026-10-25 09:44:05 [initialize] Delivery folder: C:\homelab\portfolio\samples\butterly-final
+2026-10-25 09:44:05 [initialize] Source: C:\homelab\03_Areas\Transcripts\Tim-Butterly-Highlight.mp4; requested clips: 1; KeepWork: False; Force: True
+2026-10-25 09:44:05 [initialize] Scratch folder: C:\homelab\portfolio\samples\butterly-final\.work-ff5a7b460c2746c2b533e412b080003a
+COMMAND: C:\Windows\system32\nvidia-smi.exe "--query-gpu=memory.used" "--format=csv,noheader,nounits"
+1638
+2026-10-25 09:44:05 [preflight] GPU memory used in MiB: 1638
+HTTP GET /api/settings
+{"active_provider":"ollama","providers":{"anthropic":{"model":"claude-sonnet-5","base_url":null},"openai":{"model":"gpt-4o","base_url":null},"gemini":{"model":"gemini-2.0-flash","base_url":null},"ollama":{"model":"qwen2.5:3b-instruct-q4_K_M","base_url":"http://localhost:11434"}},"whisper":{"model":"base","compute_type":"","language":"","diarization":false},"clips":{"min_duration_s":20.0,"max_duration_s":60.0,"max_clips":3},"ingest":{"ytdlp_format":"bestvideo[height\u003c=1080][ext=mp4]+bestaudio[ext=m4a]/best[height\u003c=1080]","cookies_from_browser":"","prefer_youtube_captions":false},"export":{"ratio":"9:16","caption_style":"bold_pop","loudness_lufs":-14.0,"prefer_hardware_encoder":true,"crf":18,"write_srt":false},"insecure_secret_storage":false,"keys_present":{"anthropic":false,"openai":false,"gemini":false,"huggingface_token":false}}
+2026-10-25 09:44:07 [preflight] AutoClip server is running.
+HTTP GET /api/settings
+{"active_provider":"ollama","providers":{"anthropic":{"model":"claude-sonnet-5","base_url":null},"openai":{"model":"gpt-4o","base_url":null},"gemini":{"model":"gemini-2.0-flash","base_url":null},"ollama":{"model":"qwen2.5:3b-instruct-q4_K_M","base_url":"http://localhost:11434"}},"whisper":{"model":"base","compute_type":"","language":"","diarization":false},"clips":{"min_duration_s":20.0,"max_duration_s":60.0,"max_clips":3},"ingest":{"ytdlp_format":"bestvideo[height\u003c=1080][ext=mp4]+bestaudio[ext=m4a]/best[height\u003c=1080]","cookies_from_browser":"","prefer_youtube_captions":false},"export":{"ratio":"9:16","caption_style":"bold_pop","loudness_lufs":-14.0,"prefer_hardware_encoder":true,"crf":18,"write_srt":false},"insecure_secret_storage":false,"keys_present":{"anthropic":false,"openai":false,"gemini":false,"huggingface_token":false}}
+2026-10-25 09:44:07 [preflight] Provider: ollama; Whisper: base
+COMMAND: C:\Users\korah\AppData\Local\Microsoft\WinGet\Links\ffprobe.exe "-v" "error" "-show_streams" "-show_format" "-of" "json" "C:\homelab\03_Areas\Transcripts\Tim-Butterly-Highlight.mp4"
+{
+    "streams": [
+        {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "mime_codec_string": "avc1.64002a",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "16:9",
+            "pix_fmt": "yuv420p",
+            "level": 42,
+            "color_range": "tv",
+            "color_space": "bt709",
+            "color_transfer": "bt709",
+            "color_primaries": "bt709",
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "60/1",
+            "avg_frame_rate": "60/1",
+            "time_base": "1/15360",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 384000,
+            "duration": "25.000000",
+            "bit_rate": "1056685",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "1500",
+            "extradata_size": 49,
+            "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+            },
+            "tags": {
+                "language": "und",
+                "handler_name": "ISO Media file produced by Google Inc.",
+                "encoder": "Lavc63.1.102 libx264"
+            }
+        },
+        {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "mime_codec_string": "mp4a.40.2",
+            "sample_fmt": "fltp",
+            "sample_rate": "44100",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 1024,
+            "id": "0x2",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/44100",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 1102500,
+            "duration": "25.000000",
+            "bit_rate": "129636",
+            "nb_frames": "1078",
+            "extradata_size": 5,
+            "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+            },
+            "tags": {
+                "language": "eng",
+                "handler_name": "ISO Media file produced by Google Inc."
+            }
+        }
+    ],
+    "format": {
+        "filename": "C:\\homelab\\03_Areas\\Transcripts\\Tim-Butterly-Highlight.mp4",
+        "nb_streams": 2,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "25.000000",
+        "size": "3750189",
+        "bit_rate": "1200060",
+        "probe_score": 100,
+        "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf63.1.102"
+        }
+    }
+}
+2026-10-25 09:44:08 [prepare video] Source is already H.264/yuv420p. Using the original read-only for upload.
+COMMAND: C:\Users\korah\AppData\Local\Microsoft\WinGet\Links\ffprobe.exe "-v" "error" "-show_streams" "-show_format" "-of" "json" "C:\homelab\03_Areas\Transcripts\Tim-Butterly-Highlight.mp4"
+{
+    "streams": [
+        {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "mime_codec_string": "avc1.64002a",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "16:9",
+            "pix_fmt": "yuv420p",
+            "level": 42,
+            "color_range": "tv",
+            "color_space": "bt709",
+            "color_transfer": "bt709",
+            "color_primaries": "bt709",
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "60/1",
+            "avg_frame_rate": "60/1",
+            "time_base": "1/15360",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 384000,
+            "duration": "25.000000",
+            "bit_rate": "1056685",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "1500",
+            "extradata_size": 49,
+            "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+            },
+            "tags": {
+                "language": "und",
+                "handler_name": "ISO Media file produced by Google Inc.",
+                "encoder": "Lavc63.1.102 libx264"
+            }
+        },
+        {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "mime_codec_string": "mp4a.40.2",
+            "sample_fmt": "fltp",
+            "sample_rate": "44100",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 1024,
+            "id": "0x2",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/44100",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 1102500,
+            "duration": "25.000000",
+            "bit_rate": "129636",
+            "nb_frames": "1078",
+            "extradata_size": 5,
+            "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+            },
+            "tags": {
+                "language": "eng",
+                "handler_name": "ISO Media file produced by Google Inc."
+            }
+        }
+    ],
+    "format": {
+        "filename": "C:\\homelab\\03_Areas\\Transcripts\\Tim-Butterly-Highlight.mp4",
+        "nb_streams": 2,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "25.000000",
+        "size": "3750189",
+        "bit_rate": "1200060",
+        "probe_score": 100,
+        "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf63.1.102"
+        }
+    }
+}
+2026-10-25 09:44:08 [prepare video] Prepared video verified. Duration: 25.000 seconds.
+COMMAND: C:\Windows\system32\nvidia-smi.exe "--query-gpu=memory.used" "--format=csv,noheader,nounits"
+1638
+2026-10-25 09:44:08 [submit job] GPU memory used in MiB: 1638
+2026-10-25 09:44:08 [submit job] Uploading C:\homelab\03_Areas\Transcripts\Tim-Butterly-Highlight.mp4
+HTTP POST /api/sources/upload, streaming file: C:\homelab\03_Areas\Transcripts\Tim-Butterly-Highlight.mp4
+{"id":"3aa8ba437b434da4","type":"upload","title":"Tim-Butterly-Highlight","url":null,"filename":"tmpvyxtehy1.mp4","channel":null,"duration_s":25.0,"width":1920,"height":1080,"fps":60.0,"has_audio":true,"has_video":true,"created_at":"2026-10-25T16:44:08+00:00"}
+HTTP POST /api/jobs
+{"source_id":"3aa8ba437b434da4","settings":{"max_clips":1,"ratio":"9:16"}}
+{"id":"6967aa2a60d3448d","source_id":"3aa8ba437b434da4","status":"queued","current_stage":"","progress":0.0,"error":null,"provider":"ollama","created_at":"2026-10-25T16:44:08+00:00","updated_at":"2026-10-25T16:44:08+00:00","started_at":null,"finished_at":null,"source":{"id":"3aa8ba437b434da4","type":"upload","title":"Tim-Butterly-Highlight","url":null,"filename":"tmpvyxtehy1.mp4","channel":null,"duration_s":25.0,"width":1920,"height":1080,"fps":60.0,"has_audio":true,"has_video":true,"created_at":"2026-10-25T16:44:08+00:00"}}
+2026-10-25 09:44:08 [submit job] Created job 6967aa2a60d3448d. New jobs use their own transcript cache.
+HTTP GET /api/jobs/6967aa2a60d3448d
+{"id":"6967aa2a60d3448d","source_id":"3aa8ba437b434da4","status":"running","current_stage":"","progress":0.0,"error":null,"provider":"ollama","created_at":"2026-10-25T16:44:08+00:00","updated_at":"2026-10-25T16:44:08+00:00","started_at":"2026-10-25T16:44:08+00:00","finished_at":null,"source":{"id":"3aa8ba437b434da4","type":"upload","title":"Tim-Butterly-Highlight","url":null,"filename":"tmpvyxtehy1.mp4","channel":null,"duration_s":25.0,"width":1920,"height":1080,"fps":60.0,"has_audio":true,"has_video":true,"created_at":"2026-10-25T16:44:08+00:00"}}
+2026-10-25 09:44:08 [wait for job] Job 6967aa2a60d3448d: running, stage , 0%
+HTTP GET /api/jobs/6967aa2a60d3448d
+{"id":"6967aa2a60d3448d","source_id":"3aa8ba437b434da4","status":"running","current_stage":"highlights","progress":0.55,"error":null,"provider":"ollama","created_at":"2026-10-25T16:44:08+00:00","updated_at":"2026-10-25T16:44:14+00:00","started_at":"2026-10-25T16:44:08+00:00","finished_at":null,"source":{"id":"3aa8ba437b434da4","type":"upload","title":"Tim-Butterly-Highlight","url":null,"filename":"tmpvyxtehy1.mp4","channel":null,"duration_s":25.0,"width":1920,"height":1080,"fps":60.0,"has_audio":true,"has_video":true,"created_at":"2026-10-25T16:44:08+00:00"}}
+2026-10-25 09:44:23 [wait for job] Job 6967aa2a60d3448d: running, stage highlights, 55%
+HTTP GET /api/jobs/6967aa2a60d3448d
+{"id":"6967aa2a60d3448d","source_id":"3aa8ba437b434da4","status":"done","current_stage":"export","progress":1.0,"error":null,"provider":"ollama","created_at":"2026-10-25T16:44:08+00:00","updated_at":"2026-10-25T16:44:29+00:00","started_at":"2026-10-25T16:44:08+00:00","finished_at":"2026-10-25T16:44:29+00:00","source":{"id":"3aa8ba437b434da4","type":"upload","title":"Tim-Butterly-Highlight","url":null,"filename":"tmpvyxtehy1.mp4","channel":null,"duration_s":25.0,"width":1920,"height":1080,"fps":60.0,"has_audio":true,"has_video":true,"created_at":"2026-10-25T16:44:08+00:00"}}
+2026-10-25 09:44:38 [wait for job] Job 6967aa2a60d3448d: done, stage export, 100%
+HTTP GET /api/jobs/6967aa2a60d3448d/clips
+{"id":"7bcbe48ab7a349e5","job_id":"6967aa2a60d3448d","rank":1,"start_s":0.0,"end_s":25.330000000000002,"duration_s":25.330000000000002,"start_word":0,"end_word":90,"title":"Why I won\u0027t move to Texas","hook":"to have moved sunny Texas and I\u0027m never going home","score":87,"reason":"Contrarian opening, names the specific reason for not moving, creates a strong emotional beat.","status":"exported","user_trimmed":false,"caption_style":"bold_pop","ratio":"9:16","exports":[{"id":"c889242502d04411","clip_id":"7bcbe48ab7a349e5","ratio":"9:16","style":"bold_pop","size_bytes":10668906,"created_at":"2026-10-25T16:44:29+00:00","download_url":"/api/exports/c889242502d04411/download"}]}
+2026-10-25 09:44:38 [clip 1/1] Exporting and downloading immediately to avoid AutoClip title collisions: Why I won't move to Texas
+HTTP POST /api/clips/7bcbe48ab7a349e5/export
+{"style":"bold_pop","ratio":"9:16","write_srt":false}
+{"id":"00cb24bd10fa4d85","clip_id":"7bcbe48ab7a349e5","ratio":"9:16","style":"bold_pop","size_bytes":10668906,"created_at":"2026-10-25T16:44:43+00:00","download_url":"/api/exports/00cb24bd10fa4d85/download"}
+HTTP GET /api/exports/00cb24bd10fa4d85/download -> C:\homelab\portfolio\samples\butterly-final\.work-ff5a7b460c2746c2b533e412b080003a\clip-01.mp4
+COMMAND: C:\Users\korah\AppData\Local\Microsoft\WinGet\Links\ffprobe.exe "-v" "error" "-show_streams" "-show_format" "-of" "json" "C:\homelab\portfolio\samples\butterly-final\.work-ff5a7b460c2746c2b533e412b080003a\clip-01.mp4"
+{
+    "streams": [
+        {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "mime_codec_string": "avc1.64002a",
+            "width": 1080,
+            "height": 1920,
+            "coded_width": 1080,
+            "coded_height": 1920,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "9:16",
+            "pix_fmt": "yuv420p",
+            "level": 42,
+            "color_range": "tv",
+            "color_space": "bt709",
+            "color_transfer": "bt709",
+            "color_primaries": "bt709",
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "60/1",
+            "avg_frame_rate": "60/1",
+            "time_base": "1/15360",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 384000,
+            "duration": "25.000000",
+            "bit_rate": "3206242",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "1500",
+            "extradata_size": 65,
+            "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+            },
+            "tags": {
+                "language": "und",
+                "handler_name": "VideoHandler",
+                "encoder": "Lavc63.1.102 h264_nvenc"
+            }
+        },
+        {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "mime_codec_string": "mp4a.40.2",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 1024,
+            "id": "0x2",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 1200000,
+            "duration": "25.000000",
+            "bit_rate": "194389",
+            "nb_frames": "1173",
+            "extradata_size": 5,
+            "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+            },
+            "tags": {
+                "language": "eng",
+                "handler_name": "ISO Media file produced by Google Inc."
+            }
+        }
+    ],
+    "format": {
+        "filename": "C:\\homelab\\portfolio\\samples\\butterly-final\\.work-ff5a7b460c2746c2b533e412b080003a\\clip-01.mp4",
+        "nb_streams": 2,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "25.000000",
+        "size": "10668906",
+        "bit_rate": "3414049",
+        "probe_score": 100,
+        "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf63.1.102"
+        }
+    }
+}
+2026-10-25 09:44:43 [clip 1/1] Export is H.264/yuv420p. Remuxing with faststart.
+COMMAND: C:\Users\korah\AppData\Local\Microsoft\WinGet\Links\ffmpeg.exe "-hide_banner" "-nostdin" "-n" "-loglevel" "warning" "-nostats" "-stats_period" "15" "-progress" "pipe:1" "-i" "C:\homelab\portfolio\samples\butterly-final\.work-ff5a7b460c2746c2b533e412b080003a\clip-01.mp4" "-map" "0:0" "-map" "0:1" "-c:v" "copy" "-c:a" "copy" "-movflags" "+faststart" "C:\homelab\portfolio\samples\butterly-final\.work-ff5a7b460c2746c2b533e412b080003a\delivery-1.mp4"
+frame=1500
+fps=0.00
+stream_0_0_q=-1.0
+bitrate=3414.0kbits/s
+total_size=10668906
+out_time_us=25000000
+out_time_ms=25000000
+out_time=00:00:25.000000
+2026-10-25 09:44:43 [clip 1/1] FFmpeg processed 00:00:25.000000
+dup_frames=0
+drop_frames=0
+speed= 823x
+progress=end
+COMMAND: C:\Users\korah\AppData\Local\Microsoft\WinGet\Links\ffprobe.exe "-v" "error" "-show_streams" "-show_format" "-of" "json" "C:\homelab\portfolio\samples\butterly-final\.work-ff5a7b460c2746c2b533e412b080003a\delivery-1.mp4"
+{
+    "streams": [
+        {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "mime_codec_string": "avc1.64002a",
+            "width": 1080,
+            "height": 1920,
+            "coded_width": 1080,
+            "coded_height": 1920,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "9:16",
+            "pix_fmt": "yuv420p",
+            "level": 42,
+            "color_range": "tv",
+            "color_space": "bt709",
+            "color_transfer": "bt709",
+            "color_primaries": "bt709",
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "60/1",
+            "avg_frame_rate": "60/1",
+            "time_base": "1/15360",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 384000,
+            "duration": "25.000000",
+            "bit_rate": "3206242",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "1500",
+            "extradata_size": 65,
+            "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+            },
+            "tags": {
+                "language": "und",
+                "handler_name": "VideoHandler",
+                "encoder": "Lavc63.1.102 h264_nvenc"
+            }
+        },
+        {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "mime_codec_string": "mp4a.40.2",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 1024,
+            "id": "0x2",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 1200000,
+            "duration": "25.000000",
+            "bit_rate": "194389",
+            "nb_frames": "1173",
+            "extradata_size": 5,
+            "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+            },
+            "tags": {
+                "language": "eng",
+                "handler_name": "ISO Media file produced by Google Inc."
+            }
+        }
+    ],
+    "format": {
+        "filename": "C:\\homelab\\portfolio\\samples\\butterly-final\\.work-ff5a7b460c2746c2b533e412b080003a\\delivery-1.mp4",
+        "nb_streams": 2,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "25.000000",
+        "size": "10668906",
+        "bit_rate": "3414049",
+        "probe_score": 100,
+        "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf63.1.102"
+        }
+    }
+}
+2026-10-25 09:44:43 [clip 1/1] Decoding the complete clip to check for media errors.
+COMMAND: C:\Users\korah\AppData\Local\Microsoft\WinGet\Links\ffmpeg.exe "-hide_banner" "-nostdin" "-v" "error" "-xerror" "-i" "C:\homelab\portfolio\samples\butterly-final\.work-ff5a7b460c2746c2b533e412b080003a\delivery-1.mp4" "-f" "null" "-"
+HTTP GET /api/clips/7bcbe48ab7a349e5/words
+[{"text":"to","start":0.0,"end":0.2,"speaker":null},{"text":"have","start":0.2,"end":0.76,"speaker":null},{"text":"moved","start":0.76,"end":1.22,"speaker":null},{"text":"sunny","start":1.22,"end":1.96,"speaker":null},{"text":"Texas","start":1.96,"end":2.48,"speaker":null},{"text":"and","start":2.48,"end":3.42,"speaker":null},{"text":"never","start":3.42,"end":3.68,"speaker":null},{"text":"I\u0027m","start":3.68,"end":3.92,"speaker":null},{"text":"never","start":3.92,"end":4.14,"speaker":null},{"text":"going","start":4.14,"end":4.42,"speaker":null},{"text":"home.","start":4.42,"end":4.66,"speaker":null},{"text":"It\u0027s","start":4.84,"end":4.9,"speaker":null},{"text":"carful","start":4.9,"end":5.42,"speaker":null},{"text":"of","start":5.42,"end":5.64,"speaker":null},{"text":"cacti","start":5.64,"end":6.24,"speaker":null},{"text":"and","start":6.24,"end":6.46,"speaker":null},{"text":"lizards.","start":6.46,"end":6.94,"speaker":null},{"text":"You\u0027re","start":7.54,"end":7.9,"speaker":null},{"text":"sending","start":7.9,"end":8.16,"speaker":null},{"text":"me","start":8.16,"end":8.32,"speaker":null},{"text":"pictures","start":8.32,"end":8.66,"speaker":null},{"text":"of","start":8.66,"end":8.88,"speaker":null},{"text":"lizards","start":8.88,"end":9.36,"speaker":null},{"text":"on","start":9.36,"end":9.48,"speaker":null},{"text":"the","start":9.48,"end":9.58,"speaker":null},{"text":"dashboard.","start":9.58,"end":9.84,"speaker":null},{"text":"I","start":9.84,"end":9.98,"speaker":null},{"text":"was","start":9.98,"end":10.08,"speaker":null},{"text":"like,","start":10.08,"end":10.18,"speaker":null},{"text":"is","start":10.22,"end":10.42,"speaker":null},{"text":"that","start":10.42,"end":10.42,"speaker":null},{"text":"like","start":10.42,"end":11.52,"speaker":null},{"text":"a","start":11.52,"end":11.64,"speaker":null},{"text":"cool,","start":11.64,"end":11.94,"speaker":null},{"text":"you","start":12.36,"end":12.58,"speaker":null},{"text":"seem","start":12.58,"end":12.74,"speaker":null},{"text":"like","start":12.74,"end":12.9,"speaker":null},{"text":"you","start":12.9,"end":13.04,"speaker":null},{"text":"would","start":13.04,"end":13.14,"speaker":null},{"text":"have","start":13.14,"end":13.24,"speaker":null},{"text":"like","start":13.24,"end":13.38,"speaker":null},{"text":"a","start":13.38,"end":13.46,"speaker":null},{"text":"cool","start":13.46,"end":13.7,"speaker":null},{"text":"dashboard","start":13.7,"end":14.08,"speaker":null},{"text":"ornament","start":14.08,"end":14.5,"speaker":null},{"text":"of","start":14.5,"end":14.72,"speaker":null},{"text":"a","start":14.72,"end":14.78,"speaker":null},{"text":"lizard","start":14.78,"end":15.02,"speaker":null},{"text":"nose,","start":15.02,"end":15.28,"speaker":null},{"text":"real","start":15.4,"end":15.68,"speaker":null},{"text":"reptiles.","start":15.68,"end":16.52,"speaker":null},{"text":"Yeah,","start":16.66,"end":16.8,"speaker":null},{"text":"it","start":16.8,"end":16.92,"speaker":null},{"text":"was","start":16.92,"end":17.04,"speaker":null},{"text":"my","start":17.04,"end":17.18,"speaker":null},{"text":"son\u0027s","start":17.18,"end":17.58,"speaker":null},{"text":"move,","start":17.58,"end":17.74,"speaker":null},{"text":"man.","start":17.76,"end":18.0,"speaker":null},{"text":"He","start":18.08,"end":18.16,"speaker":null},{"text":"was","start":18.16,"end":18.34,"speaker":null},{"text":"stoked.","start":18.34,"end":18.76,"speaker":null},{"text":"He","start":19.16,"end":19.32,"speaker":null},{"text":"wanted","start":19.32,"end":19.84,"speaker":null},{"text":"to","start":19.84,"end":20.0,"speaker":null},{"text":"have","start":20.0,"end":20.1,"speaker":null},{"text":"the","start":20.1,"end":20.24,"speaker":null},{"text":"lizards.","start":20.24,"end":20.38,"speaker":null},{"text":"It","start":20.38,"end":20.42,"speaker":null},{"text":"was","start":20.42,"end":20.42,"speaker":null},{"text":"just","start":20.42,"end":20.6,"speaker":null},{"text":"the","start":20.6,"end":20.76,"speaker":null},{"text":"climate.","start":20.76,"end":21.12,"speaker":null},{"text":"He","start":21.32,"end":21.44,"speaker":null},{"text":"was","start":21.44,"end":21.46,"speaker":null},{"text":"like,","start":21.46,"end":21.6,"speaker":null},{"text":"you","start":21.64,"end":22.04,"speaker":null},{"text":"could","start":22.04,"end":22.04,"speaker":null},{"text":"take","start":22.04,"end":22.14,"speaker":null},{"text":"him","start":22.14,"end":22.3,"speaker":null},{"text":"out.","start":22.3,"end":22.48,"speaker":null},{"text":"Like,","start":22.84,"end":23.04,"speaker":null},{"text":"he\u0027d","start":23.1,"end":23.28,"speaker":null},{"text":"take","start":23.28,"end":23.34,"speaker":null},{"text":"some","start":23.34,"end":23.5,"speaker":null},{"text":"for","start":23.5,"end":23.64,"speaker":null},{"text":"walks.","start":23.64,"end":23.88,"speaker":null},{"text":"We\u0027ve","start":23.88,"end":24.06,"speaker":null},{"text":"got","start":24.06,"end":24.14,"speaker":null},{"text":"outside","start":24.14,"end":24.44,"speaker":null},{"text":"lizards","start":24.44,"end":24.84,"speaker":null},{"text":"now.","start":24.84,"end":24.98,"speaker":null}]
+2026-10-25 09:44:44 [clip 1/1] Verified 01-why-i-wont-move-to-texas-7bcbe48ab7a349e5.mp4, 25.000 seconds, 1080x1920, H.264/yuv420p/AAC; full decode passed.
+AutoClip delivery manifest
+Source file: C:\homelab\03_Areas\Transcripts\Tim-Butterly-Highlight.mp4
+Source duration: 25.000 seconds
+Job ID: 6967aa2a60d3448d
+Requested clip count: 1
+Clip count: 1
+Format: MP4, H.264, yuv420p, AAC, 9:16, faststart
+Titles are AutoClip suggestions and may need editorial review.
+
+Clip 1: 01-why-i-wont-move-to-texas-7bcbe48ab7a349e5.mp4
+Duration: 25.000 seconds
+Source range: 0.000 - 25.330 seconds
+Suggested title: Why I won't move to Texas
+Transcript text (first 50 words): to have moved sunny Texas and never I'm never going home. It's carful of cacti and lizards. You're sending me pictures of lizards on the dashboard. I was like, is that like a cool, you seem like you would have like a cool dashboard ornament of a lizard nose, real
+
+
+2026-10-25 09:44:44 [complete] Manifest: C:\homelab\portfolio\samples\butterly-final\manifest.txt
+2026-10-25 09:44:44 [complete] Removed wrapper scratch files. AutoClip media, transcripts and exports are retained.
+2026-10-25 09:44:44 [complete] DELIVERY READY: 1 clips | C:\homelab\portfolio\samples\butterly-final
