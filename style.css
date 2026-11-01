@@ -326,3 +326,10 @@ figcaption { margin-top: 12px; color: var(--muted); font-size: .8rem; }
   .vram-table { font-size: .75rem; }
   .vram-table th, .vram-table td { padding: 14px 5px; }
 }
+
+/* FrenchieFam Digital */
+@media (min-width: 640px) {
+  #frenchiefam-digital .digital-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
