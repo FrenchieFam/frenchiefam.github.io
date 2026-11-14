@@ -1,11 +1,11 @@
 {
-  "name": "Bryan's Lab",
-  "short_name": "Bryan's Lab",
-  "description": "Podcast clipping & custom AI workflows",
+  "name": "FrenchieFam \u2014 Practical Automation",
+  "short_name": "FrenchieFam",
+  "description": "Practical automation experiments by Bryan.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f0f12",
-  "theme_color": "#0f0f12",
+  "background_color": "#f6f3e9",
+  "theme_color": "#f6f3e9",
   "icons": [
     {
       "src": "/favicon.svg",

@@ -1,59 +1,43 @@
-# Deploy to GitHub Pages
+# FrenchieFam portfolio deployment
 
-This site uses plain HTML and CSS. There are no dependencies or build commands.
+This is a buildless HTML/CSS/JavaScript GitHub Pages site.
+Production domain: https://frenchiefam.dev
+Repository: https://github.com/FrenchieFam/frenchiefam.github.io
+Preserve CNAME and the existing Pages configuration.
 
-## Deployment settings
+## Current redesign
+Redesign prepared on redesign/automation-home; approved for publication to main.
+Homepage: index.html, home.css, home.js.
+The earlier homepage is retained as earlier-work.html and uses style.css.
+The original project directories and sample media are retained.
+The simulation workflow is missed-call-simulation.n8n.json (manual, inactive).
 
-- GitHub username: [I will fill in]
-- Repository name: `portfolio`
-- Branch: `main`
-- Pages source: `main` branch, `/root` (repository root, shown as `/(root)` in GitHub)
-- Expected URL: `https://<username>.github.io/portfolio/`
+## Preview
+From this repository:
+python3 -m http.server 8770 --bind 0.0.0.0
+Open http://100.115.92.26:8770 from ChromeOS while Linux is running.
+Stop the server with Ctrl+C when finished. The VM IP can change.
+An offline self-contained review copy is in Chromebook Downloads:
+FrenchieFam-Website-Preview.html (open in Chrome with Ctrl+O).
+Its earlier-work link goes to the current live portfolio until publication.
 
-## 1. Create the repository in your browser
+## Review before publication
+Confirm contact email, copy, navigation, demo behavior, and mobile layout.
+The owner approved this redesign for publication on 2026-11-14.
+Publish using the existing Pages source; do not create a
+second hosting project or change DNS just to deploy this redesign.
 
-Create a public GitHub repository named `portfolio`. Leave it empty, without a README, license, or .gitignore.
+## Validation completed
+- JavaScript syntax, HTML IDs/labels/anchors, local resource paths, CNAME.
+- HTTP 200 for homepage, styles, script, favicon, manifest, archive, workflow.
+- Actual Chrome interactions: business name, opt-out, duplicate, anonymous,
+  permission, completed dial, reset.
+- Actual iframe viewports at 1280 and 390 CSS px: no horizontal overflow.
+- Screenshots inspected in both layouts and the normal Chrome viewport.
+- The workflow's n8n runtime import remains unverified; it is labeled.
 
-Replace `YOUR_USERNAME` below with your GitHub username before running the remote command.
-
-## 2. Initialize and commit locally
-
-Run these commands in PowerShell, in this order:
-
-```powershell
-Set-Location -LiteralPath 'C:\homelab\portfolio'
-git init
-git add index.html style.css deploy.md samples/sample-1.mp4
-git commit -m "Add portfolio site and sample clip"
-git branch -M main
-```
-
-## 3. Add the remote and push
-
-```powershell
-git remote add origin https://github.com/YOUR_USERNAME/portfolio.git
-git push -u origin main
-```
-
-Complete GitHub authentication if prompted.
-
-## 4. Enable Pages
-
-Open the `portfolio` repository in your browser and go to Settings > Pages.
-Under Build and deployment, choose Deploy from a branch. Select branch `main`
-and folder `/(root)`, then click Save. This publishes the repository root,
-not a folder named `root`.
-
-Expected URL: `https://<username>.github.io/portfolio/`
-
-## Sample clip
-
-The first clip is stored at `samples/sample-1.mp4`. The first video in
-`index.html` already references that path. Samples 2 and 3 are still pending.
-The portfolio introduction and sample 1 pending labels still need updating
-before the page presents that clip as ready.
-
-## Local preview and later updates
-
-Open `index.html` directly in your browser to preview the page. Commit and push
-later changes to `main` to update GitHub Pages.
+## Scope
+No claims of existing automation clients, earnings, deployed SMS, or message
+delivery. The homepage collects no form data and loads no external assets.
+Email opens the visitor's email app. Old project pages retain their earlier
+content and are not represented as current automation delivery promises.
