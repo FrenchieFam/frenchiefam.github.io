@@ -54,3 +54,16 @@ One successful lid cycle is documented without claiming measured deep suspend.
 Publish to the existing main/root Pages source with CNAME unchanged.
 
 Native Samsung Chrome checks passed: hidden/focus/click/reset simulation,1280 and390 CSS px without horizontal overflow, existing homepage demo initialized. Desktop/mobile screenshots inspected. Lenovo preview became unreachable during testing; no successful Lenovo UI check is claimed for this page.
+
+
+## Timed keep-awake release — November15,2026
+
+Case study now includes the optional system-wake feature and a labeled simulated
+popup design image. Bridge0.4.0:27 Python+44 JavaScript checks, live one-minute
+expiry and a configured15-minute battery idle-Sleep session with owner-confirmed
+screen off and healthy sampled SSH/browser heartbeats through expiry. Limits
+remain explicit. Workbench helper count is17. Both installed extensions report0.4.0.
+Final case layout checked in actual Chrome at1280/390px without overflow; existing
+bug simulation still passed. Desktop/mobile images inspected. Share preview was
+recaptured after updating the version and count. No native account screenshots
+are published. CNAME and existing homepage demo unchanged.
