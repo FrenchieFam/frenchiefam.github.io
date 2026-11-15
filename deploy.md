@@ -41,3 +41,16 @@ No claims of existing automation clients, earnings, deployed SMS, or message
 delivery. The homepage collects no form data and loads no external assets.
 Email opens the visitor's email app. Old project pages retain their earlier
 content and are not represented as current automation delivery promises.
+
+## Chromebook project — November15,2026
+
+New case-study route: /chromebook-workbench/. Its CSS and JS live beside index.html;
+it reuses /home.css and /favicon.svg. The homepage work section links to it.
+The bug explainer is a browser-local state simulation and never connects to the
+bridge, devices or any account. Existing missed-call logic is unchanged.
+Research links point to primary Chromium, Chrome, Tailscale and Playwright docs.
+Counts distinguish browser bridge51 checks from workbench12 helper checks.
+One successful lid cycle is documented without claiming measured deep suspend.
+Publish to the existing main/root Pages source with CNAME unchanged.
+
+Native Samsung Chrome checks passed: hidden/focus/click/reset simulation,1280 and390 CSS px without horizontal overflow, existing homepage demo initialized. Desktop/mobile screenshots inspected. Lenovo preview became unreachable during testing; no successful Lenovo UI check is claimed for this page.
