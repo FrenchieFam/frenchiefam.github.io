@@ -12,8 +12,8 @@ function decide(event) {
   if (!status) return { ...result, outcome: 'invalid', reason: 'DialCallStatus is required; parent CallStatus is not a substitute.' };
   if (status === 'completed') return { ...result, outcome: 'skip', reason: 'Dial attempt completed. Do not classify it as missed. Voicemail may also complete a dial attempt.' };
   if (!['busy', 'no-answer'].includes(status)) return { ...result, outcome: 'skip', reason: 'This demo only drafts a response for busy or no-answer outcomes.' };
-  if (!/^\+[1-9]\d{7,14}$/.test(event.From || '')) return { ...result, outcome: 'invalid', reason: 'Caller number is missing, anonymous, or not in international +number format.' };
-  if (!/^\+[1-9]\d{7,14}$/.test(event.To || '') || event.From === event.To) return { ...result, outcome: 'invalid', reason: 'A different business number in international +number format is required.' };
+  if (typeof event.From !== 'string' || !/^\+[1-9]\d{7,14}$/.test(event.From)) return { ...result, outcome: 'invalid', reason: 'Caller number is missing, anonymous, or not in international +number format.' };
+  if (typeof event.To !== 'string' || !/^\+[1-9]\d{7,14}$/.test(event.To) || event.From === event.To) return { ...result, outcome: 'invalid', reason: 'A different business number in international +number format is required.' };
   if (typeof event.CallSid !== 'string' || !/^[A-Za-z0-9_-]{6,100}$/.test(event.CallSid)) return { ...result, outcome: 'invalid', reason: 'A call identifier is required to build a deduplication key.' };
   if (event.optedOut !== false) return { ...result, outcome: 'blocked', reason: 'Demo opt-out state is unknown or opted out. No draft prepared.' };
   if (event.permissionConfirmed !== true) return { ...result, outcome: 'blocked', reason: 'Demo permission assumption has not been confirmed. No draft prepared.' };

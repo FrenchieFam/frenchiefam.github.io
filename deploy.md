@@ -84,3 +84,13 @@ included. Native Samsung Chrome checked case at1280x900 and390x844: no overflow,
 draft/opt-out/duplicate/voicemail shortcuts, business edit/reset pass. Homepage
 initialization and opt-out/reset regression pass. Viewport reset and original
 DeepSeek work-tab URL restored afterward. Temporary preview service stopped.
+
+## Missed-call starter patch v0.1.1
+
+Strict string checks now reject array/object/numeric telephone fields before
+JavaScript coercion.20 decision cases+output checks and16 exported-code scenarios
+pass. Offline page/workflow rebuilt; home.js contains the exact shared function.
+13-file package integrity/hash/clean extraction/tests/rebuild pass. HTML assets,
+anchors, IDs, JS syntax and CNAME checked. Existing layout/CSS unchanged. No salon
+pilot code/data or external review is published. Private41-test salon harness is
+a separate controlled offline project with no live sender, not a customer result.
