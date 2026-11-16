@@ -67,3 +67,20 @@ Final case layout checked in actual Chrome at1280/390px without overflow; existi
 bug simulation still passed. Desktop/mobile images inspected. Share preview was
 recaptured after updating the version and count. No native account screenshots
 are published. CNAME and existing homepage demo unchanged.
+
+## Missed-call case study and starter — November 15, 2026
+
+Replaced the legacy /automation/ service page with the actual missed-call lab
+case study; its prior source is retained privately in frenchiefam-launch. Added
+scenario shortcut buttons, standalone lab.html and a free v0.1.0 source ZIP with
+checksum. Homepage project link now opens the case study; existing demo remains.
+The workflow now separates Manual Trigger, fictional event and decision code.
+15 source scenarios plus output checks and 11 exported-code scenarios pass in
+Node; actual n8n import/execution remains explicitly unverified.
+
+Public package uses a 13-file allowlist; clean extraction/tests/rebuild and file
+hashes pass. No operational README, paired config, account data or screenshot is
+included. Native Samsung Chrome checked case at1280x900 and390x844: no overflow,
+draft/opt-out/duplicate/voicemail shortcuts, business edit/reset pass. Homepage
+initialization and opt-out/reset regression pass. Viewport reset and original
+DeepSeek work-tab URL restored afterward. Temporary preview service stopped.

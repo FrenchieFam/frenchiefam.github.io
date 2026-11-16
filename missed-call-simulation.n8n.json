@@ -16,20 +16,45 @@
     {
       "parameters": {
         "mode": "runOnceForAllItems",
-        "jsCode": "function decide(event) {\n  const result = { mode: 'simulation', smsSent: false, providerVerified: false };\n  if (!event || typeof event !== 'object' || Array.isArray(event)) {\n    return { ...result, outcome: 'invalid', reason: 'Expected a call event object.' };\n  }\n  const status = typeof event.DialCallStatus === 'string' ? event.DialCallStatus : '';\n  // Do not fall back to parent CallStatus: it does not describe the dial attempt.\n  if (!status) return { ...result, outcome: 'invalid', reason: 'DialCallStatus is required; parent CallStatus is not a substitute.' };\n  if (status === 'completed') return { ...result, outcome: 'skip', reason: 'Dial attempt completed. Do not classify it as missed. Voicemail may also complete a dial attempt.' };\n  if (!['busy', 'no-answer'].includes(status)) return { ...result, outcome: 'skip', reason: 'This demo only drafts a response for busy or no-answer outcomes.' };\n  if (!/^\\+[1-9]\\d{7,14}$/.test(event.From || '')) return { ...result, outcome: 'invalid', reason: 'Caller number is missing, anonymous, or not in international +number format.' };\n  if (!/^\\+[1-9]\\d{7,14}$/.test(event.To || '') || event.From === event.To) return { ...result, outcome: 'invalid', reason: 'A different business number in international +number format is required.' };\n  if (typeof event.CallSid !== 'string' || !/^[A-Za-z0-9_-]{6,100}$/.test(event.CallSid)) return { ...result, outcome: 'invalid', reason: 'A call identifier is required to build a deduplication key.' };\n  if (event.optedOut !== false) return { ...result, outcome: 'blocked', reason: 'Demo opt-out state is unknown or opted out. No draft prepared.' };\n  if (event.permissionConfirmed !== true) return { ...result, outcome: 'blocked', reason: 'Demo permission assumption has not been confirmed. No draft prepared.' };\n  if (event.alreadyProcessed !== false) return { ...result, outcome: 'blocked', reason: 'Call is already processed or its deduplication state is unknown.' };\n  const name = typeof event.businessName === 'string' ? event.businessName.trim() : '';\n  if (!name || name.length > 60 || /[\\r\\n\\u0000-\\u001f]/.test(name)) return { ...result, outcome: 'invalid', reason: 'A business name of 1–60 characters is required.' };\n  return { ...result, outcome: 'draft', reason: 'Simulated missed dial attempt passed the demo checks.', deduplicationKey: 'missed-call:' + event.CallSid, draft: { to: event.From, from: event.To, text: `${name}: Sorry we missed your call. What can we help you with? Reply STOP to opt out.` }, limitations: 'Inputs are simulated. No signature, permission, opt-out, SMS capability, or durable duplicate check was verified.' };\n}\nconst event = {\n  \"DialCallStatus\": \"no-answer\",\n  \"CallSid\": \"SIMULATED_CALL_001\",\n  \"From\": \"+12025550101\",\n  \"To\": \"+12025550102\",\n  \"businessName\": \"Example Handyman\",\n  \"optedOut\": false,\n  \"permissionConfirmed\": true,\n  \"alreadyProcessed\": false\n};\nreturn [{ json: decide(event) }];"
+        "jsCode": "// Fictional input only. Edit these values to try a scenario.\nreturn [{ json: {\n  \"DialCallStatus\": \"no-answer\",\n  \"CallSid\": \"SIMULATED_CALL_001\",\n  \"From\": \"+12025550101\",\n  \"To\": \"+12025550102\",\n  \"businessName\": \"Example Handyman\",\n  \"optedOut\": false,\n  \"permissionConfirmed\": true,\n  \"alreadyProcessed\": false\n} }];"
       },
-      "id": "draft-only",
-      "name": "Draft only — no SMS sent",
+      "id": "sample-event",
+      "name": "Fictional call event",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
         260,
         0
       ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "function decide(event) {\n  const result = { mode: 'simulation', smsSent: false, providerVerified: false };\n  if (!event || typeof event !== 'object' || Array.isArray(event)) {\n    return { ...result, outcome: 'invalid', reason: 'Expected a call event object.' };\n  }\n  const status = typeof event.DialCallStatus === 'string' ? event.DialCallStatus : '';\n  // Do not fall back to parent CallStatus: it does not describe the dial attempt.\n  if (!status) return { ...result, outcome: 'invalid', reason: 'DialCallStatus is required; parent CallStatus is not a substitute.' };\n  if (status === 'completed') return { ...result, outcome: 'skip', reason: 'Dial attempt completed. Do not classify it as missed. Voicemail may also complete a dial attempt.' };\n  if (!['busy', 'no-answer'].includes(status)) return { ...result, outcome: 'skip', reason: 'This demo only drafts a response for busy or no-answer outcomes.' };\n  if (!/^\\+[1-9]\\d{7,14}$/.test(event.From || '')) return { ...result, outcome: 'invalid', reason: 'Caller number is missing, anonymous, or not in international +number format.' };\n  if (!/^\\+[1-9]\\d{7,14}$/.test(event.To || '') || event.From === event.To) return { ...result, outcome: 'invalid', reason: 'A different business number in international +number format is required.' };\n  if (typeof event.CallSid !== 'string' || !/^[A-Za-z0-9_-]{6,100}$/.test(event.CallSid)) return { ...result, outcome: 'invalid', reason: 'A call identifier is required to build a deduplication key.' };\n  if (event.optedOut !== false) return { ...result, outcome: 'blocked', reason: 'Demo opt-out state is unknown or opted out. No draft prepared.' };\n  if (event.permissionConfirmed !== true) return { ...result, outcome: 'blocked', reason: 'Demo permission assumption has not been confirmed. No draft prepared.' };\n  if (event.alreadyProcessed !== false) return { ...result, outcome: 'blocked', reason: 'Call is already processed or its deduplication state is unknown.' };\n  const name = typeof event.businessName === 'string' ? event.businessName.trim() : '';\n  if (!name || name.length > 60 || /[\\r\\n\\u0000-\\u001f]/.test(name)) return { ...result, outcome: 'invalid', reason: 'A business name of 1–60 characters is required.' };\n  return { ...result, outcome: 'draft', reason: 'Simulated missed dial attempt passed the demo checks.', deduplicationKey: 'missed-call:' + event.CallSid, draft: { to: event.From, from: event.To, text: `${name}: Sorry we missed your call. What can we help you with? Reply STOP to opt out.` }, limitations: 'Inputs are simulated. No signature, permission, opt-out, SMS capability, or durable duplicate check was verified.' };\n}\nreturn $input.all().map(item => ({ json: decide(item.json) }));"
+      },
+      "id": "draft-only",
+      "name": "Draft only — no SMS sent",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        520,
+        0
+      ]
     }
   ],
   "connections": {
     "Run simulation": {
+      "main": [
+        [
+          {
+            "node": "Fictional call event",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fictional call event": {
       "main": [
         [
           {
