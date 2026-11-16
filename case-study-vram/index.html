@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head>
+<head><meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; script-src 'self' ; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src 'none'; form-action 'none'"><meta name="referrer" content="strict-origin-when-cross-origin">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="An 8 GB GPU, three local AI failures, and the memory budget that changed my podcast clipping pipeline. CUDA DLL fixes, VRAM contention, and orphaned model runners on Windows.">
@@ -8,8 +8,8 @@
   <meta property="og:title" content="Running local AI on 8 GB of VRAM: what actually fits">
   <meta property="og:description" content="Three failures, three fixes, and why the smallest model usually wins.">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://frenchiefam.github.io/case-study-vram/">
-  <link rel="canonical" href="https://frenchiefam.github.io/case-study-vram/">
+  <meta property="og:url" content="https://frenchiefam.dev/case-study-vram/">
+  <link rel="canonical" href="https://frenchiefam.dev/case-study-vram/">
   <title>Running local AI on 8 GB of VRAM: what actually fits | Bryan's Lab</title>
   <link rel="stylesheet" href="../style.css">
   <meta property="og:image" content="/og-preview.png">
@@ -20,6 +20,7 @@
   <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
+<aside class="archive-notice">Earlier technical notes from a different machine. These are project records, not a current service offer or a benchmark of this Chromebook. <a href="/">Current work →</a></aside>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header container">
     <a class="wordmark" href="../index.html">Bryan's Lab<span class="wordmark-dot" aria-hidden="true">.</span></a>
@@ -164,6 +165,6 @@ nvidia-smi</code></pre>
     <a href="../process/">Process</a>
     <a href="https://www.fiverr.com/s/K334ZWW">Fiverr <span aria-hidden="true">&nearr;</span></a>
     <a href="https://bryfryugc.gumroad.com/l/first-three-clients">Gumroad <span aria-hidden="true">&nearr;</span></a>
-  </footer>
+  <a href="/privacy/">Privacy</a></footer>
 </body>
 </html>

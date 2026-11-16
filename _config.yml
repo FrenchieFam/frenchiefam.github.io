@@ -1,0 +1,14 @@
+url: "https://frenchiefam.dev"
+baseurl: ""
+exclude:
+  - AGENTS.md
+  - deploy.md
+  - task.md
+  - frenchiefam-digital-prompt.md
+  - index.html.bak.20261101-012903-790
+  - index.html.bak.20261101-013233-644624
+  - style.css.bak.20261101-012903-790
+  - samples/run.log
+  - samples/butterly-final
+  - samples/butterly-temp
+  - _og-source.html
